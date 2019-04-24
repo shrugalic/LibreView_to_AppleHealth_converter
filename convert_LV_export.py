@@ -19,6 +19,7 @@ with codecs.open(INPUT_FILE_NAME, 'rU', 'utf-16-le') as f_in, open(OUTPUT_FILE_N
 	next(input_reader)
 	next(input_reader)
 	# Input data is expected in mmol/L units, and exported as is
+	# If you'd rather use mg/dL, change the column name in the next line to 'Blood Glucose (mg/dL)'
 	writer.writerow(['Start', 'Blood Glucose (mmol<180.1558800000541>/L)'])
 	for row in input_reader:
 		timestamp = row[2]
