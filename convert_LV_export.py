@@ -17,7 +17,7 @@ HOME = str(Path.home())
 
 if platform.system() != 'Darwin':
 	print('Only iOS and macOS are supported. Exiting.')
-	#import sys
+	import sys
 	sys.exit(1)
 
 IS_IOS = platform.machine().startswith("iPhone")
@@ -31,7 +31,7 @@ if USE_ICLOUD_DRIVE:
 		FS_ROOT_DIR = HOME
 	
 	# Local copy of iCloud drive
-	ICLOUD_DRIVE_DIR = FS_ROOT_DIR + '/Library/Mobile Documents/'
+	ICLOUD_DRIVE_DIR = FS_ROOT_DIR + '/Library/Mobile Documents'
 	
 	# I'm using the 'Pythonista 3' folder in my iCloud drive as base directory:
 	BASE_DIR = ICLOUD_DRIVE_DIR + '/iCloud~com~omz-software~Pythonista3/Documents'
