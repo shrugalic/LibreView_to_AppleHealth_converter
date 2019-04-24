@@ -14,7 +14,7 @@ Converts a CSV export of blood sugar levels from [LibreView](https://libreview.c
 1. Export your blood sugar levels from LibreView, by clicking **Export Patient's Glucose Data** in the bottom right of [your measurements](https://www1.libreview.com/Dashboard/MyMeasurements), to the specified **IN** directory.
 2. Run the conversion script [`convert_LV_export.py`](./convert_LV_export.py) on a device of your choice.
    - I'm using [Pythonista 3](https://omz-software.com/pythonista/) to run the conversion script on my iPhone.
-   - To run it on a Mac instead, execute the script in Terminal with `python3 convert_LV_export`
+   - To run it on a Mac instead, `cd` to the script's directory and run it with `./convert_LV_export`
      - You may need to install `python3`, for example with [Homebrew](https://brew.sh).
 3. Use [Health CSV Importer](https://lionheartsw.com/software/health-csv-importer/) to import the converted data in the **OUT** folder into the Apple Health app.
 
