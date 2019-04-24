@@ -7,7 +7,7 @@ from pathlib import Path
 import platform
 
 # Your LibreView user name
-LV_USER = 'FirstLast'
+LIBRE_VIEW_USER = 'FirstLast'
 
 # Use iCloud drive by default. Set to False to use local storage (next to this script) instead
 USE_ICLOUD_DRIVE = True
@@ -46,7 +46,7 @@ else: # Local storage
 		import os
 		BASE_DIR = os.path.dirname(__file__) # Directory this script is in
 
-INPUT_FILE_NAME = BASE_DIR + '/LV_' + LV_USER + '_Export_' + datetime.date.today().strftime("%m-%d-%Y") + '.csv'
+INPUT_FILE_NAME = BASE_DIR + '/LV_' + LIBRE_VIEW_USER + '_Export_' + datetime.date.today().strftime("%m-%d-%Y") + '.csv'
 OUTPUT_FILE_NAME = BASE_DIR + '/' + datetime.date.today().isoformat() + "_blood_glucose.csv"
 
 codecs.register_error("strict", codecs.ignore_errors)
