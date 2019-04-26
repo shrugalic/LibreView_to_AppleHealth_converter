@@ -53,9 +53,9 @@ with codecs.open(INPUT_FILE_PATH, 'rU', 'utf-16-le') as f_in, open(OUTPUT_FILE_P
 	writer.writerow(['Start', 'Blood Glucose (mmol<180.1558800000541>/L)'])
 	for row in input_reader:
 		timestamp = row[2]
-		# For 12h format, use this
+		# For default date and 12h format, use this
 		# iso_timestamp = datetime.datetime.strptime(timestamp, '%m-%d-%Y %I:%M %p').isoformat()
-		iso_timestamp = datetime.datetime.strptime(timestamp, '%m-%d-%Y %H:%M').isoformat()
+		iso_timestamp = datetime.datetime.strptime(timestamp, '%d-%m-%Y %H:%M').isoformat()
 		measurement = row[4] if row[4] else row[5]
 		if measurement:
 			writer.writerow([iso_timestamp, measurement])
