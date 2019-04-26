@@ -8,7 +8,7 @@ Converts a CSV export of blood sugar levels from [LibreView](https://libreview.c
    - **Date Format** to **Day-Month-Year**
    - **Time Format** to **24-hour**
    - **Language for UI** to **English** (this affects the decimal point of the exported CSV)
-2. The CSV file is expected to have been exported today (thus have today's date within its name, in `MM-DD-YYYY` format).
+2. The CSV file is expected to have been exported today (thus have today's date within its name, in `DD-MM-YYYY` format).
 
 ## Specifics when running on iOS
 1. `INPUT_DIR`: The CSV to convert is expected to be in the iCloud drive, within the **Pythonista 3** folder.
