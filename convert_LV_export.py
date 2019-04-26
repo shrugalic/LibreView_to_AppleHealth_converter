@@ -25,7 +25,7 @@ else: # Presumably a Mac
 ICLOUD_DIR = ICLOUD_DRIVE_DIR + '/iCloud~com~omz-software~Pythonista3/Documents'
 
 # Input file: assume the file was exported from LibreView today
-INPUT_FILE_NAME = 'LV_' + LIBRE_VIEW_USER + '_Export_' + datetime.date.today().strftime("%m-%d-%Y") + '.csv'
+INPUT_FILE_NAME = 'LV_' + LIBRE_VIEW_USER + '_Export_' + datetime.date.today().strftime("%d-%m-%Y") + '.csv'
 
 
 # Input file: iCloud drive on iOS, Downloads folder on macOS
