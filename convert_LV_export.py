@@ -1,13 +1,17 @@
 #!/usr/local/bin/python3
 
+import os
+import pwd
 import csv
 import codecs
 import datetime
 from pathlib import Path
 import platform
 
-# Your LibreView user name
-LIBRE_VIEW_USER = 'FirstLast'
+USER_NAME = pwd.getpwuid(os.getuid()).pw_name
+
+# If your LibreView user name differs from the user name on your OS, set it here
+LIBRE_VIEW_USER = USER_NAME # 'FirstLast'
 
 # The iCloud (base) directory depends on the platform
 ICLOUD_DRIVE_BASE_PATH = '/Library/Mobile Documents'
