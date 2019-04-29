@@ -25,8 +25,7 @@ else: # Presumably a Mac
 ICLOUD_DIR = ICLOUD_DRIVE_DIR + '/iCloud~com~omz-software~Pythonista3/Documents'
 
 # Input file: assume the file was exported from LibreView today
-INPUT_FILE_NAME = 'LV_' + LIBRE_VIEW_USER + '_Export_' + datetime.date.today().strftime("%d-%m-%Y") + '.csv'
-
+INPUT_FILE_NAME = LIBRE_VIEW_USER + '_glucose_' + datetime.date.today().strftime("%d-%-m-%Y") + '.csv'
 
 # Input file: iCloud drive on iOS, Downloads folder on macOS
 if IS_IOS:
@@ -43,7 +42,7 @@ else: # Presumably a Mac
 	OUTPUT_FILE_PATH = ICLOUD_DIR + '/' + OUTPUT_FILE_NAME
 
 codecs.register_error("strict", codecs.ignore_errors)
-with codecs.open(INPUT_FILE_PATH, 'rU', 'utf-16-le') as f_in, open(OUTPUT_FILE_PATH, 'w') as f_out:
+with codecs.open(INPUT_FILE_PATH, 'rU', 'utf-8') as f_in, open(OUTPUT_FILE_PATH, 'w') as f_out:
 	input_reader = csv.reader(f_in, delimiter=',')
 	writer = csv.writer(f_out, delimiter=',')
 	next(input_reader)
